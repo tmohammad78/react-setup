@@ -1,7 +1,16 @@
 {
-  "extends": ["eslint:recommend", "prettier", "plugin:import/errors", "plugin:react/recommended"],
-  "plugins": ["react", "import"],
+  "extends": [
+    "eslint:recommended",
+    "prettier",
+    "plugin:import/errors",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["react", "import", "@typescript-eslint"],
   "parserOptions": {
+    "project": "./tsconfig.json",
     "ecmaVersion": "latest",
     "sourceType": "module",
     "ecmaFeatures": {
@@ -17,14 +26,19 @@
     "react": {
       "version": "detect"
     },
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
     "import/resolver": {
-      "node": {
-        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      "typescript": {
+        "alwaysTryTypes": true
       }
     }
   },
   "rules": {
+    "react/react-in-jsx-scope": "off",
     "react/prop-types": [0], /// off
-    "quotes": ["error", "double"]
+    "quotes": [0],
+    "@typescript-eslint/no-empty-function": 0
   }
 }

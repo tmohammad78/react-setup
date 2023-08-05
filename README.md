@@ -63,7 +63,9 @@ And Add this script in package.json`"lint": "eslint \"src/\*_/_.{js,jsx}\" --qui
    `@tailwind base; @tailwind components; @tailwind utilities;` <br />
    if you see error in vscode, you should add `css.lint.unknownAtRulesL ignore` in setting.json of vscode <br />
    You can add `"editor.quickSuggestions": { "strings": true }` for active suggestion class in vscode
-8. <b>Typescript</b>
+8. <b>Typescript</b> <br />
+   `pnpm i -D typescript` to install typescript then `pnpm tsc --init` to generate base config of tsconfig file. also you can do `pnpm i -D @types/react @types/react-dom` because react is not ts under hood so we install them and there are these packages for config eslint and ts `pnpm eslint-import-resolver-typescript@3.5.1 @typescript-eslint/eslint-plugin@5.40.1 @typescript-eslint/parser@5.40.1i -D @types/react @types/react-dom` <br />
+   After that you should change script in package.json and add `ts,tsx` afther that we should change eslit config for supporting ts. [config](https://react-v8.holt.courses/lessons/typescript/typescript-and-eslint)
 9. <b>Docker</b>
 10. <b>Enviroment variable</b>
 11. <b>Husky</b>
