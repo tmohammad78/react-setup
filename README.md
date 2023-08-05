@@ -69,6 +69,7 @@ And Add this script in package.json`"lint": "eslint \"src/\*_/_.{js,jsx}\" --qui
 9. <b>Docker</b>
 10. <b>Enviroment variable</b>
 11. <b>Husky</b>
+   ```pnpm i -D husky``` then to init husky, run ```pnpm dlx husky-init``` it creates a folder as name ```.husky``` in the root project
 12. <b>Github Action</b>
 13. <b>Gitlab CI/CD</b>
 14. <b>Nginx</b>
